@@ -15,6 +15,8 @@
 @property (nonatomic, copy) RCTBubblingEventBlock onChange;
 @property (nonatomic, copy) RCTBubblingEventBlock onPickerDismiss;
 @property (nonatomic, assign) NSInteger reactMinuteInterval;
+@property (nonatomic, assign) CGFloat pickerWidth;
+@property (nonatomic, assign) CGFloat pickerHeight;
 
 @end
 

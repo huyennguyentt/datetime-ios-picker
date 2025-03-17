@@ -46,7 +46,8 @@ NSDate* convertJSTimeToDate (double jsTime) {
         // Default Picker mode
         _picker.datePickerMode = UIDatePickerModeDate;
         _dummyPicker.datePickerMode = UIDatePickerModeDate;
-
+        _picker.frame = CGRectMake(0, 0, self.pickerWidth, self.pickerHeight); 
+        _dummyPicker.frame = CGRectMake(0, 0, self.pickerWidth, self.pickerHeight);
         self.contentView = _picker;
     }
 

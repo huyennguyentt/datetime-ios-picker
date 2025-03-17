@@ -64,6 +64,8 @@ RCT_EXPORT_MODULE()
 - (instancetype)init {
   if (self = [super init]) {
     _picker = [RNDateTimePicker new];
+    _pickerWidth = 320.0; // Default width
+    _pickerHeight = 162.0; // Default height
   }
   return self;
 }
@@ -115,6 +117,8 @@ RCT_EXPORT_VIEW_PROPERTY(minuteInterval, NSInteger)
 RCT_EXPORT_VIEW_PROPERTY(enabled, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(onChange, RCTBubblingEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onPickerDismiss, RCTBubblingEventBlock)
+RCT_EXPORT_VIEW_PROPERTY(pickerWidth, CGFloat)
+RCT_EXPORT_VIEW_PROPERTY(pickerHeight, CGFloat)
 
 RCT_REMAP_VIEW_PROPERTY(mode, datePickerMode, UIDatePickerMode)
 RCT_REMAP_VIEW_PROPERTY(timeZoneOffsetInMinutes, timeZone, NSTimeZone)

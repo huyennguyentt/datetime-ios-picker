@@ -27,6 +27,13 @@ import type {
   IOSDisplay,
 } from './types';
 
+const NativeDateTimePicker = requireNativeComponent('RNDateTimePicker', null, {
+  nativeOnly: {
+    pickerWidth: true,
+    pickerHeight: true,
+  },
+});
+
 const getDisplaySafe = (display: IOSDisplay): IOSDisplay => {
   const majorVersionIOS = parseInt(Platform.Version, 10);
   if (display === IOS_DISPLAY.inline && majorVersionIOS < 14) {
@@ -44,6 +51,8 @@ const getDisplaySafe = (display: IOSDisplay): IOSDisplay => {
 };
 
 export default function Picker({
+  pickerWidth,
+  pickerHeight,
   value,
   locale,
   maximumDate,
@@ -112,6 +121,8 @@ export default function Picker({
       onResponderTerminationRequest={() => false}
       displayIOS={display}
       enabled={disabled !== true}
+      pickerWidth={pickerWidth}
+      pickerHeight={pickerHeight}
     />
   );
 }
